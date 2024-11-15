@@ -8,7 +8,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="assists/css/preStyle.css">
-
+  <link rel="stylesheet" href="assists/css/all.min.css">
+  <link rel="stylesheet" href="assists/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/assists/fonts/remixicon.css">
 
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 
@@ -40,19 +42,23 @@
       </nav>
     </header>
 
-    <div class="intro">
-      <div class="intro-img">
-        <img src="./images/illustration-intro.png" alt="illustration-intro">
+    <div class="intro-container">
+      <div class="intro">
+        <div class="intro-img">
+          <img src="./images/illustration-intro.png" alt="illustration-intro">
+        </div>
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>Fylo stores all your most important files in one secure location. Access them wherever
+          you need, share and collaborate with friends family, and co-workers.</p>
+        <button>Get Started</button>
       </div>
-      <h1>All your files in one secure location, accessible anywhere.</h1>
-      <p>Fylo stores all your most important files in one secure location. Access them wherever
-        you need, share and collaborate with friends family, and co-workers.</p>
-      <button>Get Started</button>
+      <img src="./images/bg-curvy-desktop.svg" alt="curvy-desktop">
+      <img src="./images/bg-curvy-mobile.svg" alt="curvy-mobile">
+      <div class="waved"></div>
     </div>
 
-    <img src="./images/bg-curvy-desktop.svg" alt="curvy-desktop">
-    <div class="services">
 
+    <div class="services">
       <div class="content">
         <div class="accessability">
           <img src="./images/icon-access-anywhere.svg" alt="access-anywhere">
@@ -95,95 +101,111 @@
         <a href="#">See how Fylo works <img src="./images/icon-arrow.svg" alt="arrow"></a>
       </div>
     </div>
+
+
+    <div class="testimonials">
+      <img src="./images/bg-quotes.png" alt="bg-quotes">
+      <div class="satishPatel">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.</p>
+        <div class="aboutPerson">
+          <img src="./images/profile-1.jpg" alt="Satish Patel">
+          <div>
+            <span>Satish Patel</span>
+            <span>Founder & CEO, Huddle</span>
+          </div>
+        </div>
+      </div>
+      <div class="bruceMcKenzie">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.</p>
+        <div class="aboutPerson">
+          <img src="./images/profile-2.jpg" alt="Bruce McKenzie">
+          <div>
+            <span>Bruce McKenzie</span>
+            <span>Founder & CEO, Huddle</span>
+          </div>
+        </div>
+      </div>
+      <div class="ivaBoyd">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+          become a well-oiled collaboration machine.</p>
+        <div class="aboutPerson">
+          <img src="./images/profile-3.jpg" alt="Iva Boyd">
+          <div>
+            <span>Iva Boyd</span>
+            <span>Founder & CEO, Huddle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-container">
+      <div class="box">
+        <div class="desc">
+          <h1>Get early access today</h1>
+          <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+            questions, our support team would be happy to help you.</p>
+        </div>
+        <form action="#" method="get">
+          <label for="e-mail"></label>
+          <div class="email">
+            <input type="email" name="mail" id="e-mail" placeholder="example@fylo.com">
+            <span class="error">* Please enter a valid email address</span>
+          </div>
+          <input type="submit" value="Get Started For Free">
+        </form>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="details">
+        <div class="location">
+          <img src="./images/icon-location.svg" alt="location">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua</p>
+        </div>
+        <div class="contact-ways">
+          <div class="phone">
+            <img src="/images/icon-phone.svg" alt="phone">
+            <span>+1-543-123-4567</span>
+          </div>
+          <div class="email">
+            <img src="/images/icon-email.svg" alt="email">
+            <span>example@fylo.com</span>
+          </div>
+        </div>
+        <div class="aboutUs">
+          <h4>About Us</h4>
+          <span>Jobs</span>
+          <span>Press</span>
+          <span>Blog</span>
+        </div>
+        <div class="contactUs">
+          <h4>Contact Us</h4>
+          <span>Terms</span>
+          <span>Privacy</span>
+        </div>
+        <div class="socialMedia-platforms">
+          <span class="ri-facebook-fill"></span>
+          <span class="ri-twitter-fill"></span>
+          <span class="ri-instagram-line"></span>
+        </div>
+      </div>
+    </footer>
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Seif Al-din</a>.
+      </p>
+    </footer>
   </div>
 
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <script src="./assists/logic.js"></script>
 </body>
 
 </html>
-
-<!--
-
-All your files in one secure location, accessible anywhere.
-
-Fylo stores all your most important files in one secure location. Access them wherever
-you need, share and collaborate with friends family, and co-workers.
-
-Get Started
-
-Access your files, anywhere
-
-The ability to use a smartphone, tablet, or computer to access your account means your
-files follow you everywhere.
-
-Security you can trust
-
-2-factor authentication and user-controlled encryption are just a couple of the security
-features we allow to help secure your files.
-
-Real-time collaboration
-
-Securely share files and folders with friends, family and colleagues for live collaboration.
-No email attachments required.
-
-Store any type of file
-
-Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all
-file types to be securely stored and shared.
-///////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////
-
-Stay productive, wherever you are
-
-Never let location be an issue when accessing your files. Fylo has you covered for all of your file
-storage needs.
-
-Securely share files and folders with friends, family and colleagues for live collaboration. No email
-attachments required.
-
-See how Fylo works
-
-Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
-become a well-oiled collaboration machine.
-
-Satish Patel
-Founder & CEO, Huddle
-
-Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
-become a well-oiled collaboration machine.
-
-Bruce McKenzie
-Founder & CEO, Huddle
-
-Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
-become a well-oiled collaboration machine.
-
-Iva Boyd
-Founder & CEO, Huddle
-
-Get early access today
-
-It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
-questions, our support team would be happy to help you.
-
-Get Started For Free
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua
-
-+1-543-123-4567
-example@fylo.com
-
-About Us
-Jobs
-Press
-Blog
-
-Contact Us
-Terms
-Privacy -->

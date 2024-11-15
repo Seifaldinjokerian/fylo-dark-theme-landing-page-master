@@ -8,5 +8,16 @@
     "statusBarItem.remoteBackground": "#011627",
     "titleBar.activeBackground": "#011627",
     "titleBar.inactiveBackground": "#01162799"
-  }
+  },
+  "cSpell.enableFiletypes": ["html"],
+  "cSpell.words": [
+    "Fylo",
+    "necolas",
+    "Satish",
+    "Seif",
+    "wdth",
+    "wdthwght",
+    "wght"
+  ],
+  "cSpell.language": "en,en-GB,lorem"
 }

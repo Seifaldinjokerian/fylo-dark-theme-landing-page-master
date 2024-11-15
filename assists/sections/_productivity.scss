@@ -1,0 +1,62 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/vars" as *;
+@use "../helpers/mediaQuery" as *;
+
+.productivity {
+  background: $darkBlueMainBackground;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+
+  .image {
+    width: 45%;
+    margin-right: 50px;
+    > img {
+      width: 100%;
+    }
+  }
+  .info {
+    width: 40%;
+    h1 {
+      text-wrap-style: balance;
+      color: $white;
+    }
+    p {
+      font-size: 14px;
+      color: #ddd;
+    }
+    a {
+      text-decoration: none;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $cyanInsideCall-to-actionGradient;
+      color: $cyanInsideCall-to-actionGradient;
+      display: flex;
+      width: 150px;
+      align-items: center;
+      font-size: 14px;
+      justify-content: space-between;
+      &:hover {
+        color: #ddd;
+        border-color: #ddd;
+      }
+    }
+  }
+  @include breakpoints(mobile) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+
+    .image {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+    .info {
+      width: 100%;
+      h1 {
+        font-size: 19px;
+      }
+    }
+  }
+}

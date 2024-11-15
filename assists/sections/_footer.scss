@@ -1,0 +1,130 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/vars" as *;
+@use "../helpers/mediaQuery" as *;
+
+#footer {
+  background: $darkBlueFooterBackground;
+  padding: 150px 100px 50px;
+  .logo {
+    width: 100px;
+    margin: 20px 0;
+    img {
+      width: 100%;
+    }
+  }
+  .details {
+    display: flex;
+    justify-content: space-between;
+    color: #ddd;
+    .location {
+      width: 315px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      font-size: 14px;
+      img {
+        margin-top: 10px;
+      }
+      p {
+        margin: 0 0 0 15px;
+        font-weight: 400;
+      }
+    }
+    .contact-ways {
+      height: 60px;
+      font-size: 12px;
+      width: 150px;
+      > div {
+        display: flex;
+        align-items: center;
+        color: #ddd;
+        img {
+          margin-right: 20px;
+        }
+      }
+      .phone {
+        margin-bottom: 15px;
+      }
+    }
+    .aboutUs,
+    .contactUs {
+      h4 {
+        font-weight: 400;
+        color: #ddd;
+        margin: 0;
+        transition: 300ms;
+        cursor: pointer;
+        &:hover {
+          color: $white;
+          font-weight: 700;
+        }
+      }
+      > span {
+        color: #ddd;
+        display: block;
+        font-size: 14px;
+        margin-top: 10px;
+        font-weight: 400;
+      }
+    }
+    .socialMedia-platforms {
+      @include flex-between();
+      align-items: flex-start;
+      width: 120px;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50%;
+        color: $white;
+        border: 1px solid $white;
+        width: 30px;
+        height: 30px;
+        transition: 300ms;
+        &:hover {
+          border: 1px solid $cyanInsideCall-to-actionGradient;
+          color: $cyanInsideCall-to-actionGradient;
+        }
+      }
+    }
+  }
+  @include breakpoints(mobile) {
+    text-align: start;
+    padding: 150px 30px;
+    .logo {
+      width: 100px;
+      margin: 20px 0;
+      img {
+        width: 100%;
+      }
+    }
+    .details {
+      flex-direction: column;
+      > div:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      .location {
+        width: 90%;
+      }
+      .socialMedia-platforms {
+        @include flex-between();
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        margin-top: 50px;
+        span {
+          margin: 0 15px 0;
+        }
+      }
+    }
+  }
+}
+
+footer:last-of-type {
+  background: $darkBlueFooterBackground;
+  color: #ddd;
+  p {
+    margin: 0;
+  }
+}

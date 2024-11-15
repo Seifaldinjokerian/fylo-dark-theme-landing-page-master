@@ -1,14 +1,32 @@
-$darkBlue: hsl(217, 28%, 15%);
-$darkBlueMainBackground: hsl(218, 28%, 13%);
-$darkBlueFooterBackground: hsl(216, 53%, 9%);
-$darkBlueTestimonialsBackground: hsl(219, 30%, 18%);
-$cyanInsideCall-to-actionGradient: hsl(176, 68%, 64%);
-$blueInsideCall-to-actionGradient: hsl(198, 60%, 50%);
-$lightRedError: hsl(0, 100%, 63%);
-$white: hsl(0, 0%, 100%);
+// import mediaQuery file
+@use "./helpers/mediaQuery" as *;
+
+// import variables file
+@use "./helpers/vars" as *;
+
+// import mixins file
+@use "./helpers/mixins" as *;
 
 // import header styles file
 @use "./sections/header";
+
+// import intro styles file
+@use "./sections/intro";
+
+// import services styles file
+@use "./sections/services";
+
+// import productivity styles file
+@use "./sections/productivity";
+
+// import testimonials styles file
+@use "./sections/testimonials";
+
+// import login styles file
+@use "./sections/login";
+
+// import footer styles file
+@use "./sections/footer";
 
 @font-face {
   font-family: "Raleway";
@@ -22,6 +40,13 @@ $white: hsl(0, 0%, 100%);
 * {
   box-sizing: border-box;
 }
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: "Raleway";
+  }
+}
+
 body {
   min-height: 100vh;
   font-family: "Open Sans";
@@ -29,149 +54,31 @@ body {
 }
 .container {
   background: $darkBlue;
-}
-
-@mixin fbtwn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin resetUl {
-  inset: 0;
-  list-style: none;
-}
-
-header {
-  font-family: "Raleway";
-  padding: 20px 40px;
-  margin-bottom: 30px;
-  @include fbtwn;
-
-  .logo {
-    display: flex;
-    flex: 1;
-  }
-  .logo ~ nav {
-    ul {
-      @include resetUl;
-      @include fbtwn;
-      li {
-        padding: 10px;
-        a {
-          text-decoration: none;
-          color: whitesmoke;
-        }
-      }
-    }
-  }
-}
-
-.intro {
   position: relative;
-  z-index: 2;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 600px;
-  .intro-img {
-    img {
-      width: 100%;
-    }
-  }
-  > h1 {
-    font-family: "Raleway";
-    color: hsl(0, 0%, 100%);
-    margin: 15px 0;
-    letter-spacing: 1px;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-  > p {
-    font-size: 16px;
-    color: #f5f5f5;
-    font-weight: 400;
-    width: 500px;
-    line-height: 1.5;
-    margin: 0px;
-  }
-  button {
-    display: block;
-    margin-top: 15px;
-    text-align: center;
-    padding: 10px 20px;
-    width: 200px;
-    background: linear-gradient(
-      90deg,
-      $cyanInsideCall-to-actionGradient,
-      $blueInsideCall-to-actionGradient
-    );
-    border-radius: 20px;
-    border: none;
-    color: $white;
-    font-weight: 700;
-    cursor: pointer;
-    &:hover {
-      background: linear-gradient(
-        90deg,
-        $cyanInsideCall-to-actionGradient 100%,
-        $blueInsideCall-to-actionGradient
-      );
-    }
-  }
 }
+
 img[alt="curvy-desktop"] {
   width: 100%;
   position: absolute;
-  top: 73%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.services {
-  z-index: 1;
-  position: relative;
-  margin: 195px auto 50px;
-  background: hsl(218, 28%, 13%);
-  padding: 0 40px;
-  .content {
+img[alt="curvy-mobile"] {
+  display: none;
+}
+@include breakpoints(mobile) {
+  img[alt="curvy-desktop"] {
+    display: none;
+  }
+  img[alt="curvy-mobile"] {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
-    position: relative;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    > div {
-      width: 40%;
-      text-align: center;
-      margin-bottom: 100px;
-      h3 {
-        color: white;
-        font-weight: 700;
-        margin: 20px 0 0 0;
-      }
-      p {
-        font-size: 14px;
-        font-weight: 400;
-        color: #f5f5f5;
-        margin-top: 5px;
-      }
-    }
-    .accessability {
-      p {
-        margin: 5px 15px;
-      }
-    }
-    .security {
-      p {
-        margin: 5px -5px;
-      }
-    }
   }
 }
