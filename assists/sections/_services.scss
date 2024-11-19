@@ -1,0 +1,63 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/vars" as *;
+@use "../helpers/mediaQuery" as *;
+
+.services {
+  z-index: 1;
+  position: relative;
+  margin: 180px auto 0px;
+  background: hsl(218, 28%, 13%);
+  padding: 0 50px;
+  .content {
+    z-index: 1;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    > div {
+      width: 40%;
+      text-align: center;
+      margin-bottom: 100px;
+      h3 {
+        color: white;
+        font-weight: 700;
+        margin: 20px 0 0 0;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #f5f5f5;
+        margin-top: 5px;
+      }
+    }
+    .accessability {
+      p {
+        margin: 5px 10px;
+      }
+    }
+    .security {
+      p {
+        margin: 5px -10px;
+      }
+    }
+  }
+  @include breakpoints(mobile) {
+    padding: 30px;
+    margin-top: 100px;
+    .content {
+      flex-direction: column;
+      width: 100%;
+      > div {
+        width: 100%;
+      }
+      .accessability {
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

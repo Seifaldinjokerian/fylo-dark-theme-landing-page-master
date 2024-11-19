@@ -1,0 +1,84 @@
+// import mediaQuery file
+@use "./helpers/mediaQuery" as *;
+
+// import variables file
+@use "./helpers/vars" as *;
+
+// import mixins file
+@use "./helpers/mixins" as *;
+
+// import header styles file
+@use "./sections/header";
+
+// import intro styles file
+@use "./sections/intro";
+
+// import services styles file
+@use "./sections/services";
+
+// import productivity styles file
+@use "./sections/productivity";
+
+// import testimonials styles file
+@use "./sections/testimonials";
+
+// import login styles file
+@use "./sections/login";
+
+// import footer styles file
+@use "./sections/footer";
+
+@font-face {
+  font-family: "Raleway";
+  src: url(./fonts/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(./fonts/OpenSans-VariableFont_wdth\wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: "Raleway";
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans";
+  margin: 0;
+}
+.container {
+  background: $darkBlue;
+  position: relative;
+}
+
+img[alt="curvy-desktop"] {
+  width: 100%;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img[alt="curvy-mobile"] {
+  display: none;
+}
+@include breakpoints(mobile) {
+  img[alt="curvy-desktop"] {
+    display: none;
+  }
+  img[alt="curvy-mobile"] {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#011627",
+    "activityBar.background": "#011627",
+    "sash.hoverBorder": "#011627",
+    "statusBar.background": "#011627",
+    "statusBarItem.hoverBackground": "#023259",
+    "statusBarItem.remoteBackground": "#011627",
+    "titleBar.activeBackground": "#011627",
+    "titleBar.inactiveBackground": "#01162799"
+  },
+  "cSpell.enableFiletypes": ["html"],
+  "cSpell.words": [
+    "Fylo",
+    "necolas",
+    "Satish",
+    "Seif",
+    "wdth",
+    "wdthwght",
+    "wght"
+  ],
+  "cSpell.language": "en,en-GB,lorem"
+}
